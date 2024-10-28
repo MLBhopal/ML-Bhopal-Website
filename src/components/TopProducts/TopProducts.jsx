@@ -42,18 +42,21 @@ const ProductsData = [
 const TopProducts = ({ handleOrderPopup }) => {
   return (
     <div>
-      <div className="container">
+      <div className="container mx-auto text-center">
         {/* Header section */}
-        <div className="text-left mb-24">
-          <p data-aos="fade-up" className="text-sm text-primary">
-            Our dedicated team is committed to driving innovation and collaboration in the field of Machine Learning.
-          </p>
-          <h1 data-aos="fade-up" className="text-3xl font-bold">
-            Meet our Team
+        <div className="text-center mb-14">
+          
+          <h1 data-aos="fade-up" className="text-3xl font-bold mt-2">
+            Meet Our Team
           </h1>
+          <br />
+          <p data-aos="fade-up" className="text-sm text-primary">
+            Our dedicated team is committed to driving innovation and collaboration in the field of Machine Learning. 
+          </p>
+          <br />
         </div>
 
-        {/* Body section */}
+        {/* Team members grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-12 place-items-center">
           {ProductsData.map((data) => (
             <div
@@ -80,8 +83,10 @@ const TopProducts = ({ handleOrderPopup }) => {
 
               {/* Details section */}
               <div className="px-4 pb-6 text-center">
-                <h1 className="text-xl font-bold mb-2">{data.title}</h1>
-                <p className="text-gray-600 dark:text-gray-400 group-hover:text-black duration-300 text-sm">
+                <h1 className="text-xl font-bold mb-2 h-[40px] flex items-center justify-center">
+                  {data.title}
+                </h1>
+                <p className="text-gray-600 dark:text-gray-400 group-hover:text-black duration-300 text-sm h-[60px] overflow-hidden">
                   {data.description}
                 </p>
                 <button
